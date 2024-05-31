@@ -1,5 +1,5 @@
 Suitable for .NET 8 or above
 <br/>
-Run now! 
+Try now! 
 <br/>
 https://dotnetfiddle.net/NJltHw
