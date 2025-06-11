@@ -15,17 +15,10 @@ class Program
         List<int> Case = new();
         foreach (char i in Text)
         {
-            if (char.IsLetter(i) || char.IsDigit(i))
+            if ((char.IsLetter(i) || char.IsDigit(i)) && i < 128)
             {
-                Index.Add((Convert.ToInt32(i.ToString().ToUpper().ToCharArray()[0])).ToString());
-                if (char.IsUpper(i))
-                {
-                    Case.Add(1);
-                }
-                else
-                {
-                    Case.Add(0);
-                }
+                Index.Add(((int)char.ToUpperInvariant(i)).ToString());
+                Case.Add(char.IsUpper(i) ? 1 : 0);
             }
             else if (i == ' ')
             {
